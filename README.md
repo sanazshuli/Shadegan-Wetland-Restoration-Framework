@@ -18,8 +18,6 @@ Using multi-temporal Landsat 8/9 imagery and ERA5-Land climate data in Google Ea
 
 ## 🗺️ Key Maps
 
-## 🗺️ Key Maps
-
 ### Optimal Restoration Strategies Map (Main Result)
 ![Optimal Restoration Strategies Map](Optimal_Restoration_Strategies_Map2.png)
 
@@ -31,15 +29,6 @@ Using multi-temporal Landsat 8/9 imagery and ERA5-Land climate data in Google Ea
 
 ### Hydrological Risk Prioritization Map
 ![Hydrological Risk Prioritization](Hydrological_Risk_Prioritization_Map.png)
-
----
-
-## 📊 Spatio-Temporal Trends (2015–2024)
-## 📊 Spatio-Temporal Trends (2015–2024)
-
-![Vegetation Index Trend](Spatio_Temporal_Distribution_maps_of_Vegetation_index.png)  
-![Water Body Index Trend](Spatio_Temporal_Distribution_maps_of_waterBody_index.png)  
-![Turbidity Index Trend](Spatio_Temporal_Distribution_maps_of_Turbidity_index.png)
 
 ---
 
@@ -94,7 +83,7 @@ All analysis performed in **Google Earth Engine** + **Random Forest / SVM**
 
 All processing scripts are available in the [`scripts/`](scripts/) folder:
 
-- **`shadegan_restoration_analysis.py`** → Main script (GEE connection, data loading, Random Forest training, strategy classification, and map export)
+- **`shadegan_restoration_analysis.py`** → Main script (GEE connection, data loading, Random Forest training, strategy classification, map generation and export)
 - `requirements.txt` → Required Python packages
 
 **How to run:**
@@ -111,10 +100,4 @@ All processing scripts are available in the [`scripts/`](scripts/) folder:
 ├── Optimal_Restoration_Strategies_Map2.png
 ├── Methodology_Workflow.png
 ├── Land_Cover_Classification.png
-├── Hydrological_Risk_Prioritization_Map.png
-├── Spatio_Temporal_Distribution_maps_of_*.png
-├── scripts/
-│   └── shadegan_restoration_analysis.py
-├── requirements.txt
-├── README.md
-└── Full_Report.pdf (after publication)
+├── Hyd
