@@ -18,6 +18,8 @@ Using multi-temporal Landsat 8/9 imagery and ERA5-Land climate data in Google Ea
 
 ## 🗺️ Key Maps
 
+## 🗺️ Key Maps
+
 ### Optimal Restoration Strategies Map (Main Result)
 ![Optimal Restoration Strategies Map](Optimal_Restoration_Strategies_Map2.png)
 
@@ -29,6 +31,14 @@ Using multi-temporal Landsat 8/9 imagery and ERA5-Land climate data in Google Ea
 
 ### Hydrological Risk Prioritization Map
 ![Hydrological Risk Prioritization](Hydrological_Risk_Prioritization_Map.png)
+
+---
+
+## 📊 Spatio-Temporal Trends (2015–2024)
+
+![Vegetation Index Trend](Spatio_Temporal_Distribution_maps_of_Vegetation_index.png)  
+![Water Body Index Trend](Spatio_Temporal_Distribution_maps_of_waterBody_index.png)  
+![Turbidity Index Trend](Spatio_Temporal_Distribution_maps_of_Turbidity_index.png)
 
 ---
 
