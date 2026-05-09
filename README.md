@@ -35,6 +35,7 @@ Using multi-temporal Landsat 8/9 imagery and ERA5-Land climate data in Google Ea
 ---
 
 ## 📊 Spatio-Temporal Trends (2015–2024)
+## 📊 Spatio-Temporal Trends (2015–2024)
 
 ![Vegetation Index Trend](Spatio_Temporal_Distribution_maps_of_Vegetation_index.png)  
 ![Water Body Index Trend](Spatio_Temporal_Distribution_maps_of_waterBody_index.png)  
