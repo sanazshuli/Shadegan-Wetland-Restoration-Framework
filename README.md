@@ -79,6 +79,22 @@ All analysis performed in **Google Earth Engine** + **Random Forest / SVM**
 
 ---
 
+## 💻 Code & Scripts
+
+All processing scripts are available in the [`scripts/`](scripts/) folder:
+
+- `1_ndvi_ndwi_turbidity.js` → Calculation of ecological indices (NDVI, NDWI, NDTI)
+- `2_land_cover_classification.js` → Supervised land cover classification
+- `3_random_forest_model.js` → Optimal Restoration Strategies modeling
+- `4_hydrological_vulnerability.js` → Vulnerability assessment)
+
+**How to run:**
+1. Open [Google Earth Engine Code Editor](https://code.earthengine.google.com/)
+2. Copy and paste each script
+3. Adjust the study area geometry if needed
+
+---
+
 ## 📁 Repository Structure
 
 ```bash
@@ -87,5 +103,9 @@ All analysis performed in **Google Earth Engine** + **Random Forest / SVM**
 ├── Land_Cover_Classification.png
 ├── Hydrological_Risk_Prioritization_Map.png
 ├── Spatio_Temporal_Distribution_maps_of_*.png
+├── scripts/
+│   ├── 1_ndvi_ndwi_turbidity.js
+│   ├── 2_land_cover_classification.js
+│   └── ...
 ├── README.md
 └── Full_Report.pdf (after publication)
