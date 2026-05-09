@@ -19,19 +19,24 @@ Using multi-temporal Landsat 8/9 imagery and ERA5-Land climate data in Google Ea
 ## 🗺️ Key Maps
 
 ### Optimal Restoration Strategies Map (Main Result)
-![Optimal Restoration Strategies Map](Optimal_Restoration_Strategies_Map.png)
+![Optimal Restoration Strategies Map](Optimal_Restoration_Strategies_Map2.png)
 
 ### Methodology Workflow
 ![Methodology Workflow](Methodology_Workflow.png)
 
 ### Land Cover Classification Map
-![Land Cover Classification](Land_Cover_Classification_Map.png)
+![Land Cover Classification](Land_Cover_Classification.png)
 
 ### Hydrological Risk Prioritization Map
 ![Hydrological Risk Prioritization](Hydrological_Risk_Prioritization_Map.png)
 
-### Hydrological Regimes Map
-![Hydrological Regimes](Hydrological_Regimes_Map.png)
+---
+
+## 📊 Spatio-Temporal Trends (2015–2024)
+
+![Vegetation Index Trend](Spatio_Temporal_Distribution_maps_of_Vegetation_index.png)  
+![Water Body Index Trend](Spatio_Temporal_Distribution_maps_of_waterBody_index.png)  
+![Turbidity Index Trend](Spatio_Temporal_Distribution_maps_of_Turbidity_index.png)
 
 ---
 
@@ -77,10 +82,10 @@ All analysis performed in **Google Earth Engine** + **Random Forest / SVM**
 ## 📁 Repository Structure
 
 ```bash
-├── Optimal_Restoration_Strategies_Map.png
+├── Optimal_Restoration_Strategies_Map2.png
 ├── Methodology_Workflow.png
-├── Land_Cover_Classification_Map.png
+├── Land_Cover_Classification.png
 ├── Hydrological_Risk_Prioritization_Map.png
-├── Hydrological_Regimes_Map.png
+├── Spatio_Temporal_Distribution_maps_of_*.png
 ├── README.md
 └── Full_Report.pdf (after publication)
