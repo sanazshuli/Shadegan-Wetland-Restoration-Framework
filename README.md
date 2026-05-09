@@ -83,15 +83,14 @@ All analysis performed in **Google Earth Engine** + **Random Forest / SVM**
 
 All processing scripts are available in the [`scripts/`](scripts/) folder:
 
-- `1_ndvi_ndwi_turbidity.js` → Calculation of ecological indices (NDVI, NDWI, NDTI)
-- `2_land_cover_classification.js` → Supervised land cover classification
-- `3_random_forest_model.js` → Optimal Restoration Strategies modeling
-- `4_hydrological_vulnerability.js` → Vulnerability assessment)
+- **`shadegan_restoration_analysis.py`** → Main script (GEE connection, data loading, Random Forest training, strategy classification, and map export)
+- `requirements.txt` → Required Python packages
 
 **How to run:**
-1. Open [Google Earth Engine Code Editor](https://code.earthengine.google.com/)
-2. Copy and paste each script
-3. Adjust the study area geometry if needed
+1. Open [Google Colab](https://colab.research.google.com)
+2. Upload `shadegan_restoration_analysis.py`
+3. Run the cells step by step
+4. Make sure your GEE assets and shapefiles are in the correct paths
 
 ---
 
@@ -104,8 +103,7 @@ All processing scripts are available in the [`scripts/`](scripts/) folder:
 ├── Hydrological_Risk_Prioritization_Map.png
 ├── Spatio_Temporal_Distribution_maps_of_*.png
 ├── scripts/
-│   ├── 1_ndvi_ndwi_turbidity.js
-│   ├── 2_land_cover_classification.js
-│   └── ...
+│   └── shadegan_restoration_analysis.py
+├── requirements.txt
 ├── README.md
 └── Full_Report.pdf (after publication)
