@@ -84,13 +84,6 @@ All analysis performed in **Google Earth Engine** + **Random Forest / SVM**
 All processing scripts are available in the [`scripts/`](scripts/) folder:
 
 - **`shadegan_restoration_analysis.py`** → Main script (GEE connection, data loading, Random Forest training, strategy classification, map generation and export)
-- `requirements.txt` → Required Python packages
-
-**How to run:**
-1. Open [Google Colab](https://colab.research.google.com)
-2. Upload `shadegan_restoration_analysis.py`
-3. Run the cells step by step
-4. Make sure your GEE assets and shapefiles are in the correct paths
 
 ---
 
@@ -100,4 +93,11 @@ All processing scripts are available in the [`scripts/`](scripts/) folder:
 ├── Optimal_Restoration_Strategies_Map2.png
 ├── Methodology_Workflow.png
 ├── Land_Cover_Classification.png
-├── Hyd
+├── Hydrological_Risk_Prioritization_Map.png
+├── Spatio_Temporal_Distribution_maps_of_Vegetation_index.png
+├── Spatio_Temporal_Distribution_maps_of_waterBody_index.png
+├── Spatio_Temporal_Distribution_maps_of_Turbidity_index.png
+├── scripts/
+│   └── shadegan_restoration_analysis.py
+├── README.md
+└── Full_Report.pdf (after publication)
