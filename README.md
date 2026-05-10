@@ -19,7 +19,7 @@ Using multi-temporal Landsat 8/9 imagery and ERA5-Land climate data in Google Ea
 ## 🗺️ Key Maps
 
 ### Optimal Restoration Strategies Map (Main Result)
-![Optimal Restoration Strategies Map](Optimal_Restoration_Strategies_Map2.png)
+![Optimal Restoration Strategies Map](Optimal_Restoration_Strategies_Map.png)
 
 ### Methodology Workflow
 ![Methodology Workflow](Methodology_Workflow.png)
