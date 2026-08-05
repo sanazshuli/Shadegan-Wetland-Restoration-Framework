@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the accompanying manuscript."
+title: "Shadegan Wetland Restoration Framework"
+type: software
+authors:
+  - family-names: "Shuli"
+    given-names: "Sanaz"
+repository-code: "https://github.com/sanazshuli/Shadegan-Wetland-Restoration-Framework"
+abstract: "Earth-observation and geospatial machine-learning workflow for wetland vulnerability assessment and restoration decision support."
+keywords:
+  - wetland restoration
+  - Earth observation
+  - Google Earth Engine
+  - Random Forest
+  - GeoAI
+license: "LicenseRef-Proprietary"
