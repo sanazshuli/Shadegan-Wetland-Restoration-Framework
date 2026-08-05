@@ -1,0 +1,13 @@
+{
+  "earth_engine_project": "YOUR_EE_PROJECT_ID",
+  "assets": {
+    "aoi": "projects/YOUR_PROJECT/assets/YOUR_SHADEGAN_AOI",
+    "restoration_priority": "projects/YOUR_PROJECT/assets/YOUR_PRIORITY_IMAGE",
+    "land_cover_2024": "projects/YOUR_PROJECT/assets/YOUR_LAND_COVER_IMAGE"
+  },
+  "local_vector_directory": "path/to/local/planning_layers",
+  "output_directory": "exports",
+  "scale_m": 30,
+  "random_seed": 42,
+  "number_of_trees": 50
+}
