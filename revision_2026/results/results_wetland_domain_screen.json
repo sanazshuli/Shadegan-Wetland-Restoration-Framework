@@ -1,0 +1,75 @@
+{
+ "domain_km2": 3374.3,
+ "aoi_km2": 13225.3,
+ "domain_px": 62706,
+ "base_shares_pct": {
+  "1": 15.23,
+  "2": 71.7,
+  "3": 13.07
+ },
+ "base_with_turbidity_shares_pct": {
+  "1": 16.13,
+  "2": 71.23,
+  "3": 12.64
+ },
+ "turbidity_effect_pct_changed": 0.89,
+ "clauses_pct_of_domain": {
+  "lost_water": 14.78,
+  "veg_decline": 0.74,
+  "stable_water": 4.26,
+  "veg_stable_or_greening": 10.05
+ },
+ "V0_archived_rerun_in_domain_shares": {
+  "1": 56.24,
+  "2": 27.6,
+  "3": 16.14
+ },
+ "agreement_V0_vs_new_in_domain_pct": 32.41,
+ "mc_draws": 500,
+ "mc_ranges": {
+  "occ": [
+   15,
+   35
+  ],
+  "f_dry": [
+   0.1,
+   0.3
+  ],
+  "slope": [
+   -0.01,
+   -0.002
+  ],
+  "veg": [
+   0.15,
+   0.25
+  ],
+  "f_wet": [
+   0.7,
+   0.9
+  ]
+ },
+ "mc_share_mean_and_95CI": {
+  "High": [
+   14.87,
+   6.56,
+   26.72
+  ],
+  "Medium": [
+   72.67,
+   61.85,
+   81.0
+  ],
+  "Low": [
+   12.46,
+   9.84,
+   15.33
+  ]
+ },
+ "mc_pixels_stable_ge80pct": 82.67,
+ "mc_pixels_stable_ge95pct": 74.88,
+ "mc_modal_equals_base_pct": 97.17,
+ "mc_robust_high_km2": 274.0,
+ "scale_mixed_cells_pct_of_domain": 32.84,
+ "scale_10m_water_wetland_area_km2": 1216.4,
+ "scale_share_in_cells_below_50pct": 17.25
+}

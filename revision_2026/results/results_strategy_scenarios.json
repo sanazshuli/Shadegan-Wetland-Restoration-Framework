@@ -1,0 +1,112 @@
+{
+ "S1 Baseline (3-km stressor buffer)": {
+  "Water management": 459.2,
+  "Re-vegetation": 15.0,
+  "Pollution control": 172.7,
+  "Conservation": 277.2,
+  "Monitoring": 2450.2
+ },
+ "S2 Environmental-flow allocation": {
+  "Water management": 401.8,
+  "Re-vegetation": 15.0,
+  "Pollution control": 172.7,
+  "Conservation": 334.5,
+  "Monitoring": 2450.2
+ },
+ "S3a Effective pollution control (no buffer)": {
+  "Water management": 498.6,
+  "Re-vegetation": 15.3,
+  "Pollution control": 0.0,
+  "Conservation": 277.2,
+  "Monitoring": 2583.2
+ },
+ "S3b Weak pollution control (5-km buffer)": {
+  "Water management": 428.5,
+  "Re-vegetation": 15.0,
+  "Pollution control": 270.3,
+  "Conservation": 277.2,
+  "Monitoring": 2383.3
+ },
+ "S4 Conservation-first": {
+  "Water management": 459.2,
+  "Re-vegetation": 15.0,
+  "Pollution control": 172.0,
+  "Conservation": 1695.5,
+  "Monitoring": 1032.6
+ },
+ "agreement_with_S1_pct": {
+  "S1 Baseline (3-km stressor buffer)": 100.0,
+  "S2 Environmental-flow allocation": 98.3,
+  "S3a Effective pollution control (no buffer)": 94.9,
+  "S3b Weak pollution control (5-km buffer)": 97.1,
+  "S4 Conservation-first": 58.0
+ },
+ "S1_by_zone_km2": {
+  "Freshwater (abeshirin)": {
+   "Water management": 61.3,
+   "Re-vegetation": 2.3,
+   "Pollution control": 8.4,
+   "Conservation": 59.8,
+   "Monitoring": 242.5
+  },
+  "Brackish (labeabeshur)": {
+   "Water management": 7.6,
+   "Re-vegetation": 0.0,
+   "Pollution control": 34.0,
+   "Conservation": 0.0,
+   "Monitoring": 218.9
+  },
+  "Intertidal (jazromad)": {
+   "Water management": 0.0,
+   "Re-vegetation": 0.0,
+   "Pollution control": 0.0,
+   "Conservation": 0.0,
+   "Monitoring": 91.9
+  },
+  "Protected area (hefazatshode)": {
+   "Water management": 347.3,
+   "Re-vegetation": 9.2,
+   "Pollution control": 3.7,
+   "Conservation": 277.2,
+   "Monitoring": 1417.6
+  }
+ },
+ "S1_by_county_km2": {
+  "بندرماهشهر": {
+   "Water management": 23.2,
+   "Re-vegetation": 0.0,
+   "Pollution control": 41.0,
+   "Conservation": 0.0,
+   "Monitoring": 296.3
+  },
+  "شادگان": {
+   "Water management": 345.8,
+   "Re-vegetation": 8.1,
+   "Pollution control": 53.3,
+   "Conservation": 241.7,
+   "Monitoring": 1177.7
+  },
+  "آبادان": {
+   "Water management": 65.8,
+   "Re-vegetation": 4.9,
+   "Pollution control": 12.2,
+   "Conservation": 35.4,
+   "Monitoring": 649.6
+  }
+ },
+ "pollution_buffer_sensitivity_km2": {
+  "1 km": 72.1,
+  "2 km": 124.6,
+  "3 km": 172.7,
+  "4 km": 220.0,
+  "5 km": 270.3
+ },
+ "domain_km2": 3374.3,
+ "sugarcane_proxy_km2": 20.4,
+ "drainage_effect": {
+  "PC_with_drainage_km2": 172.7,
+  "PC_urban_rail_only_km2": 164.9,
+  "PC_from_drainage_only_km2": 7.8,
+  "agreement_with_without_pct": 99.77
+ }
+}

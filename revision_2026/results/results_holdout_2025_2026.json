@@ -1,0 +1,42 @@
+{
+ "2025_L8": {
+  "High_lost_water_still_dry_pct": 98.9,
+  "Low_stable_water_still_wet_pct": 78.9,
+  "Medium_wet_pct": 7.5,
+  "domain_wet_pct": 9.0,
+  "High_robust_P80_still_dry_pct": 98.9,
+  "veg_decline_cells_NDVI_below_their_2015_2024_median_pct": 66.8
+ },
+ "2025_L8L9": {
+  "High_lost_water_still_dry_pct": 99.3,
+  "Low_stable_water_still_wet_pct": 75.5,
+  "Medium_wet_pct": 3.4,
+  "domain_wet_pct": 5.7,
+  "High_robust_P80_still_dry_pct": 99.5,
+  "veg_decline_cells_NDVI_below_their_2015_2024_median_pct": 74.7
+ },
+ "2026_L8": {
+  "High_lost_water_still_dry_pct": 97.7,
+  "Low_stable_water_still_wet_pct": 84.5,
+  "Medium_wet_pct": 6.8,
+  "domain_wet_pct": 8.8,
+  "High_robust_P80_still_dry_pct": 98.7,
+  "veg_decline_cells_NDVI_below_their_2015_2024_median_pct": 42.4
+ },
+ "2026_L8L9": {
+  "High_lost_water_still_dry_pct": 97.5,
+  "Low_stable_water_still_wet_pct": 85.7,
+  "Medium_wet_pct": 7.2,
+  "domain_wet_pct": 9.2,
+  "High_robust_P80_still_dry_pct": 98.5,
+  "veg_decline_cells_NDVI_below_their_2015_2024_median_pct": 27.6
+ },
+ "2015_2024_mean_High_lost_dry_pct": 92.3,
+ "2015_2024_mean_Low_stable_wet_pct": 91.7,
+ "window_2015_2026_agreement_with_2015_2024_pct": 97.83,
+ "window_2015_2026_shares_pct": {
+  "1": 15.0,
+  "2": 72.7,
+  "3": 12.3
+ }
+}

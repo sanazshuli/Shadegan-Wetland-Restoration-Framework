@@ -1,0 +1,87 @@
+{
+ "mean_NDVI": {
+  "sen": 0.000857,
+  "sen_ci": [
+   -0.002,
+   0.003
+  ],
+  "boot_ci": [
+   -0.00075,
+   0.0035
+  ],
+  "loo_range": [
+   0.000708,
+   0.001536
+  ],
+  "sign_stable_loo": true,
+  "ci_includes_zero": true
+ },
+ "mean_NDWI": {
+  "sen": -0.0,
+  "sen_ci": [
+   -0.003,
+   0.00225
+  ],
+  "boot_ci": [
+   -0.0045,
+   0.00175
+  ],
+  "loo_range": [
+   -0.00155,
+   0.000288
+  ],
+  "sign_stable_loo": false,
+  "ci_includes_zero": true
+ },
+ "SR_B2": {
+  "sen": -0.001,
+  "sen_ci": [
+   -0.0024,
+   0.000429
+  ],
+  "boot_ci": [
+   -0.0024,
+   0.00125
+  ],
+  "loo_range": [
+   -0.001292,
+   -0.0005
+  ],
+  "sign_stable_loo": true,
+  "ci_includes_zero": true
+ },
+ "veg_km2": {
+  "sen": 27.5,
+  "sen_ci": [
+   -12.29,
+   62.345
+  ],
+  "boot_ci": [
+   2.79,
+   62.345
+  ],
+  "loo_range": [
+   27.141,
+   35.300417
+  ],
+  "sign_stable_loo": true,
+  "ci_includes_zero": true
+ },
+ "water_km2": {
+  "sen": 27.001111,
+  "sen_ci": [
+   -25.306667,
+   59.47
+  ],
+  "boot_ci": [
+   -12.77,
+   56.3125
+  ],
+  "loo_range": [
+   25.288125,
+   31.071905
+  ],
+  "sign_stable_loo": true,
+  "ci_includes_zero": true
+ }
+}

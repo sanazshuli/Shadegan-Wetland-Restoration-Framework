@@ -1,173 +1,86 @@
 # Shadegan Wetland Restoration Framework
 
-**Earth observation, geospatial machine learning, and spatial decision support for wetland restoration**
+**Audit, rebuild and test of a satellite-based restoration screen for Shadegan Wetland, Iran**
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](#requirements)
-[![Google Earth Engine](https://img.shields.io/badge/Google%20Earth%20Engine-required-green)](#reproducibility-and-data-access)
-[![Manuscript](https://img.shields.io/badge/Manuscript-under%20review-orange)](#citation)
+This repository accompanies the manuscript *"Auditing and rebuilding a satellite-based restoration screen for Shadegan Wetland, Iran: reproducibility, uncertainty and conditional management scenarios"* (Shuli & Sharghi, under revision at *Wetlands*, manuscript WELA-D-26-00390).
 
-## Project status
+It contains two parts:
 
-This repository is a curated research and reproducibility record accompanying a manuscript under review. It documents the analytical workflow, reported validation outputs, selected code, and final maps. Some local planning layers and Google Earth Engine assets cannot be redistributed publicly; therefore, the public repository supports **methodological review and partial reproduction**, rather than one-click reproduction of the full spatial analysis.
+| Folder | Content |
+|---|---|
+| [`revision_2026/`](revision_2026) | **Current analysis.** Earth Engine scripts, Python code, result tables and figures of the revised manuscript (November 2026). |
+| [`archive_2025_submission/`](archive_2025_submission) and the files in the repository root (`scripts/`, `notebooks/`, `data/`, `*.png`) | **Archived workflow** of the original submission (2025). Kept unchanged so that the audit can be checked. See the corrections listed below before using any of it. |
 
-## Research objective
+## Corrections to the archived workflow
 
-The project develops a spatially explicit decision-support framework for Shadegan Wetland, Iran, by integrating:
+The revision recovered and reran the archived Earth Engine code ([`archive_2025_submission/Codes_project_Shadegan_archived_2025.ipynb`](archive_2025_submission)). The audit established that:
 
-- multi-temporal Landsat 8/9 imagery (2015–2024);
-- ERA5-Land temperature and precipitation;
-- SRTM elevation;
-- ESA WorldCover training information;
-- ecological indicators, including NDVI, NDWI, and a turbidity-related spectral indicator;
-- hydrological vulnerability;
-- local management-plan layers, including habitat sensitivity and water zoning; and
-- administrative boundaries for locally targeted restoration planning.
+- The land-cover classifier used the official ESA WorldCover codes (80 water, 90 herbaceous wetland, 40 cropland, 50 built-up). The wrong codes (10, 70 and 100) occur only in the **priority rules**. Correcting them changes 2.0% of cells.
+- The NDVI/NDWI clause of the priority rules was written in the inverted direction. Writing it as intended raises the High class from 45% to 86% of the study area.
+- The NDVI-trend transformation is recoverable: inverted min–max scaling over the study area (`revision_2026/results/normalization_minmax.csv`). The High clause corresponds to a raw slope below 3.4 × 10⁻⁴ yr⁻¹.
+- **Only a Random Forest** was used for land cover. The statement in the earlier README and manuscript that RF and SVM were compared was an error.
+- The strategy class "General Restoration" had no training samples. The reported 98.1% accuracy (Kappa 0.971) measures agreement with rule-derived labels and is not evidence of ecological accuracy. The revised analysis therefore maps the rules directly and does not use a classifier.
 
-The final output is a five-category restoration-strategy map:
-
-1. General Restoration  
-2. Re-vegetation  
-3. Water Management  
-4. Pollution Control  
-5. Conservation  
-
-## Analytical workflow
-
-1. **Earth-observation preprocessing**  
-   Landsat 8/9 surface-reflectance imagery was filtered and processed in Google Earth Engine for the 2015–2024 study period.
-
-2. **Environmental indicators**  
-   Vegetation, surface-water, turbidity-related, climate, terrain, and land-cover predictors were derived and harmonised.
-
-3. **Land-cover classification**  
-   Random Forest and Support Vector Machine classifiers were compared for four classes: water, reedbed/wetland, agriculture, and urban/barren. The manuscript reports an average **five-fold cross-validation accuracy of 86.19%**. Random Forest was selected for the final map.
-
-4. **Hydrological-vulnerability modelling**  
-   NDVI, NDWI, turbidity, temperature, precipitation, DEM, NDVI trend, and land cover were integrated into a three-class priority model. Rule-derived ecological labels were used for training, followed by Random Forest classification and focal-median smoothing.
-
-5. **Restoration-strategy modelling**  
-   The priority map was combined with habitat sensitivity, water zoning, distance-based variables, and local planning information to produce spatially explicit intervention classes.
-
-6. **Administrative translation**  
-   The final strategy map was intersected with surrounding county boundaries to support local planning and resource allocation.
-
-## Reported validation results
-
-| Component | Reported result | Interpretation |
-|---|---:|---|
-| Land-cover classification | 86.19% mean accuracy | Five-fold cross-validation reported in the manuscript |
-| Restoration-strategy classification | 98.1% overall accuracy; Kappa 0.971 | Recalculated from the manuscript's reported validation matrix |
-
-The script [`scripts/validate_reported_metrics.py`](scripts/validate_reported_metrics.py) recalculates the restoration-strategy accuracy and Cohen's Kappa from the published confusion matrix stored in [`data/reported_restoration_confusion_matrix.csv`](data/reported_restoration_confusion_matrix.csv).
-
-### Validation caveat
-
-The restoration labels were generated using expert/rule-based criteria derived from the same planning and environmental variables used by the model. In addition, the reported confusion matrix contains no validation samples for the **General Restoration** class. These values should therefore be interpreted as **internal consistency against the rule-derived labels**, not as independent field validation of all five strategies. Field validation remains limited and is identified as a study limitation.
-
-## Key outputs
-
-### Optimal restoration strategies
-![Optimal Restoration Strategies Map](Optimal_Restoration_Strategies_Map.png)
-
-### Methodological workflow
-![Methodology Workflow](Methodology_Workflow.png)
-
-### Land-cover classification
-![Land Cover Classification](Land_Cover_Classification.png)
-
-### Hydrological vulnerability
-![Hydrological Risk Prioritization](Hydrological_Risk_Prioritization_Map.png)
-
-## Repository structure
+## Revised workflow (`revision_2026/`)
 
 ```text
-.
-├── README.md
-├── requirements.txt
-├── CITATION.cff
-├── .gitignore
-├── data/
-│   └── reported_restoration_confusion_matrix.csv
-├── scripts/
-│   ├── validate_reported_metrics.py
-│   └── shadegan_workflow_template.py
-├── notebooks/
-│   └── Shadegan_Wetland_Restoration_Demo.ipynb
-├── docs/
-│   └── REPRODUCIBILITY.md
-└── selected maps and figures
+revision_2026/
+├── gee/                                   Google Earth Engine Code Editor scripts (JavaScript)
+│   ├── 01_rerun_archived_versions_V0_V2.js     rerun of the archived screen: V0 archived, V1 WorldCover fixed, V2 direction fixed
+│   ├── 02_wetland_domain_inputs.js             WorldCover/JRC fractions and annual July NDVI, NDWI, SR_B2 (2015–2024)
+│   └── 03_holdout_2025_2026_and_ERA5.js         hold-out years 2025–2026, scene counts, ERA5-Land precipitation
+├── python/
+│   ├── prepare_inputs.py      exports and shapefiles -> arrays on the 250-m grid; sugarcane drainage-source proxy
+│   ├── analyse_versions.py    reproduction test against the archived exports; effect of each correction
+│   ├── trends.py              Theil–Sen slopes, bootstrap and leave-one-year-out ranges (no p-values)
+│   ├── domain_screen.py       wetland domain, revised screen, Monte Carlo threshold analysis (500 draws), scale
+│   ├── holdout.py             persistence of the screen in 2025 and 2026
+│   ├── strategy.py            decision-tree strategy layer and scenarios S1–S4
+│   ├── sensitivity_map.py     digitization of the management-plan habitat-sensitivity map and cross-tabulation
+│   ├── figures.py             journal figures (PDF, 600-dpi TIFF, PNG)
+│   └── shpread.py, tiffread.py, tiffread2.py   readers and projections (no GDAL needed)
+├── results/                   all numbers reported in the manuscript (CSV / JSON)
+├── figures/                   manuscript figures (PDF and PNG)
+└── data/Shadegan_AOI_from_export.geojson   study-area polygon (250-m grid footprint)
 ```
 
-## Quick start
+### Run order
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/sanazshuli/Shadegan-Wetland-Restoration-Framework.git
-cd Shadegan-Wetland-Restoration-Framework
-```
-
-### 2. Create an environment
+1. In the [Earth Engine Code Editor](https://code.earthengine.google.com), run the three scripts in `gee/` and start the export tasks. Exports go to the Google Drive folder `Shadegan_revision_2026`.
+2. Put the exported GeoTIFFs in a working folder, for example `work/`. Put the management-plan shapefiles in `work/shapefiles/` and the five archived exports in `work/archived_exports/`.
+3. Run:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate        # macOS/Linux
-# .venv\Scripts\activate         # Windows
 pip install -r requirements.txt
+export SHADEGAN_WORKDIR=work/
+python revision_2026/python/prepare_inputs.py
+python revision_2026/python/analyse_versions.py
+python revision_2026/python/trends.py
+python revision_2026/python/domain_screen.py
+python revision_2026/python/holdout.py
+python revision_2026/python/strategy.py
+python revision_2026/python/sensitivity_map.py work/p-45.png   # page image of the plan's Appendix 2, 300 dpi
+python revision_2026/python/figures.py
 ```
 
-### 3. Verify the reported strategy metrics
+`results/` is written into the working folder. Running the scripts on the exports used for the manuscript reproduces the files in `revision_2026/results/` exactly, with one exception. Rasterizing the shapefiles in `prepare_inputs.py` can differ by single cells from the rasters used for the manuscript, which shifts strategy-class areas by at most about 5 km² (0.2% of the wetland domain).
 
-```bash
-python scripts/validate_reported_metrics.py
-```
+### Software
 
-### 4. Open the notebook
+Python ≥ 3.10 with `numpy`, `scipy`, `pandas`, `matplotlib`, `tifffile` and `pillow` (see `requirements.txt`). The analysis was run with Python 3.13, numpy 2, scipy 1.18 and matplotlib 3.10. No GIS library is required. A Google Earth Engine account is needed only for step 1.
 
-```bash
-jupyter notebook notebooks/Shadegan_Wetland_Restoration_Demo.ipynb
-```
+## Data availability
 
-The notebook verifies the reported matrix, visualises class support, and explains which parts of the full workflow require private/local spatial inputs.
+| Data | Availability |
+|---|---|
+| Landsat 8/9 C2 L2, JRC Global Surface Water v1.4, ESA WorldCover v100, ERA5-Land monthly aggregates, SRTM | Public, through Google Earth Engine; accessed by the scripts in `gee/` |
+| Result tables and figures | This repository (`revision_2026/results`, `revision_2026/figures`) |
+| Study-area polygon | This repository (`revision_2026/data`) |
+| Planning layers digitized from the 2011 Shadegan Wetland integrated management plan (sub-basin, protected area, hydrological zones, rivers, railways, cities, counties) and the digitized habitat-sensitivity map | Not redistributed (source restrictions). Available from the corresponding author on reasonable request, with permission of the Khuzestan Department of Environment. The scripts document exactly how they were used. |
+| Archived priority exports (five GeoTIFFs, 2025) | Available from the corresponding author |
 
-## Requirements
-
-- Python 3.10+
-- Google Earth Engine account for geospatial processing
-- Access to the required local planning layers and Earth Engine assets for full execution
-
-## Reproducibility and data access
-
-Public satellite and climate inputs can be accessed through Google Earth Engine. Local management-plan layers, digitised boundaries, and some derived Earth Engine assets are not redistributed because of source and access constraints.
-
-To adapt the workflow:
-
-1. copy `config.example.json` to `config.json`;
-2. replace the example Earth Engine asset IDs and local paths;
-3. authenticate Earth Engine;
-4. run the workflow template section by section;
-5. document any changes to thresholds, labels, spatial resolution, or sampling.
-
-Do not commit credentials, private asset identifiers, or personally mounted Google Drive paths.
-
-## Limitations
-
-- Independent field validation of restoration-strategy classes is limited.
-- Rule-derived training labels can inflate apparent classification performance.
-- The General Restoration class has zero support in the reported validation matrix.
-- Results depend on planning-layer quality, threshold choices, temporal sampling, and scale harmonisation.
-- The framework is site-specific and requires recalibration before transfer to another wetland.
+Contact: Sanaz Shuli — sanazshuli@gmail.com
 
 ## Citation
 
-The accompanying manuscript is under review:
-
-> Shuli, S. *A Spatially Explicit Decision Support Framework for Wetland Resilience: Integrating Random Forest, GEE, and Administrative Boundaries to Guide Restoration in Shadegan, Iran.* Manuscript under review.
-
-A machine-readable citation is provided in [`CITATION.cff`](CITATION.cff).
-
-## Author
-
-**Sanaz Shuli**  
-Environmental GeoAI · Earth Observation · Wetland Resilience  
-GitHub: [sanazshuli](https://github.com/sanazshuli)
+See [`CITATION.cff`](CITATION.cff). Please cite the article once it is published.

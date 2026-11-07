@@ -1,0 +1,7 @@
+version,mapping,High_pct,Medium_pct,Low_pct
+V0,rf_smooth,42.63,50.09,7.28
+V0,direct,44.95,47.07,7.98
+V1,rf_smooth,42.53,48.24,9.23
+V1,direct,44.95,45.07,9.98
+V2,rf_smooth,86.91,6.41,6.68
+V2,direct,86.01,6.93,7.06

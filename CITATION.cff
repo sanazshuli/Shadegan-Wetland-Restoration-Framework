@@ -1,16 +1,21 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the accompanying manuscript."
-title: "Shadegan Wetland Restoration Framework"
+message: "If you use this repository, please cite the accompanying article."
+title: "Shadegan Wetland Restoration Framework: audit, rebuild and test of a satellite-based restoration screen"
 type: software
 authors:
   - family-names: "Shuli"
     given-names: "Sanaz"
+  - family-names: "Sharghi"
+    given-names: "Ali"
 repository-code: "https://github.com/sanazshuli/Shadegan-Wetland-Restoration-Framework"
-abstract: "Earth-observation and geospatial machine-learning workflow for wetland vulnerability assessment and restoration decision support."
+abstract: "Earth Engine and Python code, result tables and figures for the reproducibility audit, rebuilt wetland-domain screen, uncertainty analysis and management scenarios for Shadegan Wetland, Iran."
 keywords:
   - wetland restoration
+  - reproducibility
   - Earth observation
   - Google Earth Engine
-  - Random Forest
-  - GeoAI
+  - uncertainty analysis
+  - scenario planning
 license: "LicenseRef-Proprietary"
+version: "2.0 (revision, November 2026)"
+date-released: "2026-11-07"

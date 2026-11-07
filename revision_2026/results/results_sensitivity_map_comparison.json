@@ -1,0 +1,94 @@
+{
+ "sens_area_km2": {
+  "Very high": 1547.3,
+  "High": 2550.7,
+  "Medium": 221.2,
+  "Low": 552.8
+ },
+ "sens_total_km2": 4872.0,
+ "domain_in_sens_pct": 70.1,
+ "IoU_sens_protected": 0.63,
+ "best_shift_cells": [
+  0,
+  -2
+ ],
+ "priority_by_sensitivity": {
+  "Very high": {
+   "domain_km2": 823.9,
+   "High%": 18.6,
+   "Medium%": 68.5,
+   "Low%": 12.9,
+   "robustHigh_km2": 71.9
+  },
+  "High": {
+   "domain_km2": 945.0,
+   "High%": 15.0,
+   "Medium%": 62.9,
+   "Low%": 22.1,
+   "robustHigh_km2": 90.2
+  },
+  "Medium": {
+   "domain_km2": 195.4,
+   "High%": 22.0,
+   "Medium%": 59.6,
+   "Low%": 18.4,
+   "robustHigh_km2": 24.6
+  },
+  "Low": {
+   "domain_km2": 401.0,
+   "High%": 16.6,
+   "Medium%": 78.5,
+   "Low%": 4.9,
+   "robustHigh_km2": 30.5
+  },
+  "Outside map": {
+   "domain_km2": 1008.9,
+   "High%": 10.8,
+   "Medium%": 82.2,
+   "Low%": 7.0,
+   "robustHigh_km2": 56.7
+  }
+ },
+ "S1_strategy_km2_by_sensitivity": {
+  "Very high": {
+   "WM": 148.3,
+   "RV": 5.2,
+   "PC": 0.5,
+   "CS": 105.0,
+   "MO": 564.8
+  },
+  "High": {
+   "WM": 136.6,
+   "RV": 3.4,
+   "PC": 20.8,
+   "CS": 150.6,
+   "MO": 633.6
+  },
+  "Medium": {
+   "WM": 42.2,
+   "RV": 0.8,
+   "PC": 0.0,
+   "CS": 0.3,
+   "MO": 152.1
+  },
+  "Low": {
+   "WM": 60.8,
+   "RV": 0.3,
+   "PC": 10.5,
+   "CS": 0.2,
+   "MO": 329.3
+  },
+  "Outside map": {
+   "WM": 71.4,
+   "RV": 5.2,
+   "PC": 140.9,
+   "CS": 21.1,
+   "MO": 770.3
+  }
+ },
+ "WM_in_VH_or_H_pct": 62.0,
+ "PC_in_VH_or_H_pct": 12.4,
+ "CS_in_VH_or_H_pct": 92.2,
+ "MO_in_VH_or_H_pct": 48.9,
+ "robustHigh_in_VH_or_H_pct": 59.2
+}
